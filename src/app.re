@@ -17,5 +17,10 @@ let make = (~message, _children) => {
         <code> (ReasonReact.stringToElement(" src/App.re ")) </code>
         (ReasonReact.stringToElement("and save to reload."))
       </p>
+      <div>
+        <Cell input=(Text("Hello")) />
+        <Cell input=(Image("http://www.smilemorestudios.com/sms_logo_256.png")) />
+        <Cell input=(Text("World")) />
+      </div>
     </div>
 };
