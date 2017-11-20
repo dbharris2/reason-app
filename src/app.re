@@ -4,6 +4,13 @@
 
 let component = ReasonReact.statelessComponent("App");
 
+/* let foo = () : Item.model => {
+  {
+    imageUrl: "http://icons.iconarchive.com/icons/danleech/simple/48/facebook-icon.png",
+    text: "FB",
+  }
+}; */
+
 let make = (~message, _children) => {
   ...component,
   render: (_self) =>
@@ -18,9 +25,13 @@ let make = (~message, _children) => {
         (ReasonReact.stringToElement("and save to reload."))
       </p>
       <div>
-        <Cell input=(Text("Hello")) />
-        <Cell input=(Image("http://www.smilemorestudios.com/sms_logo_256.png")) />
-        <Cell input=(Text("World")) />
+        <Item blah=(Null) />
+        <Item blah=(Text("Hello")) />
+        <Item blah=(Image("http://icons.iconarchive.com/icons/danleech/simple/48/facebook-icon.png")) />
+        <Item blah=(TextWithImage({
+          imageUrl: "http://icons.iconarchive.com/icons/danleech/simple/48/facebook-icon.png",
+          text: "FB",
+        })) />
       </div>
     </div>
 };
